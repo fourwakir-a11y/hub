@@ -88,3 +88,24 @@ h1 {
   opacity: 0.8;
   line-height: 1.5;
 }
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.tile {
+  background: #121c2a;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #1e2a3a;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.tile:hover {
+  transform: translateY(-3px);
+  border: 1px solid #4aa3ff;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
