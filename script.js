@@ -34,9 +34,14 @@ function setTheme(theme) {
 }
 function runSearch() {
   const query = document.getElementById("searchInput").value;
-  const frame = document.getElementById("searchFrame");
+  const box = document.getElementById("searchFrameContainer");
 
   if (!query) return;
 
-  frame.src = "https://duckduckgo.com/?q=" + encodeURIComponent(query);
+  box.innerHTML = `
+    <iframe
+      src="https://duckduckgo.com/?q=${encodeURIComponent(query)}"
+      style="width:100%; height:100%; border:none; border-radius:12px;">
+    </iframe>
+  `;
 }
