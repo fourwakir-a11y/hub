@@ -39,7 +39,7 @@ function runSearch() {
   const box = document.getElementById("searchFrameContainer");
 
   if (!input || !box) {
-    console.log("Missing elements");
+    console.log("Missing search elements");
     return;
   }
 
