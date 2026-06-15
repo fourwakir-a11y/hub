@@ -1,57 +1,37 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #0f0f0f;
-  color: white;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Xbox Game Library</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
 
-/* HERO */
-.hero {
-  height: 60vh;
-  padding: 40px;
-  background: #111;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  transition: 0.3s ease;
-}
+  <div class="hero" id="hero">
+    <h1 id="title">Xbox Library</h1>
+    <p id="description">Hover a game to preview it</p>
+  </div>
 
-.hero h1 {
-  font-size: 50px;
-  margin: 0;
-}
+  <div class="games">
 
-.hero p {
-  opacity: 0.8;
-}
+    <div class="card"
+         onmouseover="changeGame('Fortnite','Battle Royale','https://images.unsplash.com/photo-1605902711622-cfb43c4437d0?w=1200')">
+      Fortnite
+    </div>
 
-/* GAME ROW */
-.games {
-  display: flex;
-  gap: 15px;
-  padding: 20px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-}
+    <div class="card"
+         onmouseover="changeGame('Minecraft','Build anything','https://images.unsplash.com/photo-1607457561901-e6ec3a6d7c5c?w=1200')">
+      Minecraft
+    </div>
 
-.card {
-  min-width: 200px;
-  height: 100px;
-  background: #1c1c1c;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: 0.2s;
-  scroll-snap-align: start;
-  border: 2px solid transparent;
-}
+    <div class="card"
+         onmouseover="changeGame('GTA V','Open world chaos','https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?w=1200')">
+      GTA V
+    </div>
 
-.card:hover {
-  transform: scale(1.08);
-  border: 2px solid #107c10;
-  box-shadow: 0 0 20px rgba(16,124,16,0.6);
-}
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
