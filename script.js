@@ -23,14 +23,14 @@ function setTheme(theme) {
     red:     ["#0a0f16", "#2a0f0f", "#3b1a1a", "#5a0a1a"]
   };
 
-  const colors = themes[theme];
+  const c = themes[theme];
 
   bg.style.background = `
     linear-gradient(-45deg,
-      ${colors[0]},
-      ${colors[1]},
-      ${colors[2]},
-      ${colors[3]}
+      ${c[0]},
+      ${c[1]},
+      ${c[2]},
+      ${c[3]}
     )
   `;
 }
