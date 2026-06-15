@@ -1,10 +1,11 @@
 body {
   margin: 0;
-  font-family: Arial;
-  background: #0f0f0f;
+  font-family: Arial, sans-serif;
+  background: #0a0f16;
   color: white;
 }
 
+/* APP LAYOUT */
 .app {
   display: flex;
   height: 100vh;
@@ -12,39 +13,58 @@ body {
 
 /* SIDEBAR */
 .sidebar {
-  width: 200px;
-  background: #111;
+  width: 240px;
+  background: #0e1622;
   padding: 20px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
+  border-right: 1px solid #1d2a3a;
+}
+
+.sidebar h2 {
+  margin: 0 0 10px 0;
+  color: #4aa3ff;
 }
 
 .sidebar button {
-  background: #222;
+  background: #141f2c;
   color: white;
-  border: none;
-  padding: 10px;
+  border: 1px solid transparent;
+  padding: 12px;
+  border-radius: 10px;
   cursor: pointer;
-  border-radius: 8px;
+  text-align: left;
+  transition: 0.2s;
 }
 
 .sidebar button:hover {
-  background: #107c10;
+  background: #1a2a3d;
+  border: 1px solid #4aa3ff;
 }
 
-/* MAIN AREA */
+/* MAIN */
 .main {
   flex: 1;
-  padding: 20px;
-  overflow: auto;
+  padding: 30px;
+  overflow-y: auto;
 }
 
 /* PAGES */
 .page {
-  display: block;
+  animation: fade 0.2s ease-in-out;
 }
 
 .hidden {
   display: none;
+}
+
+@keyframes fade {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* HEADINGS */
+h1 {
+  margin-top: 0;
 }
