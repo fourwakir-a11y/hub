@@ -56,3 +56,34 @@ min-width: 200px;
   border: 2px solid #107c10;
   box-shadow: 0 0 25px rgba(16,124,16,0.7);
 }
+.games {
+  display: flex;
+  gap: 15px;
+  padding: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.card {
+  min-width: 200px;
+  height: 120px;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.2s;
+  scroll-snap-align: start;
+  border: 2px solid transparent;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card:hover {
+  transform: scale(1.08);
+  border: 2px solid #107c10;
+  box-shadow: 0 0 25px rgba(16,124,16,0.7);
+}
