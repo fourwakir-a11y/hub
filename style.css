@@ -187,3 +187,26 @@ p {
   border: 1px solid #4aa3ff;
   box-shadow: 0 0 15px rgba(74, 163, 255, 0.2);
 }
+.search-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #1e2a3a;
+  background: #121c2a;
+  color: white;
+}
+
+.search-box button {
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: none;
+  background: #4aa3ff;
+  color: black;
+  cursor: pointer;
+}
