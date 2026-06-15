@@ -61,8 +61,7 @@
     </div>
 
     <!-- SEARCH -->
-    <<div class="page hidden" id="search">
-  <div class="page hidden" id="search">
+    <div class="page hidden" id="search">
   <h1>Search</h1>
 
   <div class="search-app">
@@ -71,7 +70,10 @@
       <button onclick="runSearch()">Search</button>
     </div>
 
-    <iframe id="searchFrame"></iframe>
+    <!-- SAFE VERSION: start empty -->
+    <div id="searchFrameContainer" class="search-frame">
+      <p style="opacity:0.6">Search results will appear here</p>
+    </div>
   </div>
 </div>
 
