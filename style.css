@@ -74,11 +74,23 @@ h1 {
   margin-top: 0;
 }
 .page {
-  background: #0f1722;
-  padding: 25px;
-  border-radius: 16px;
-  border: 1px solid #1e2a3a;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+.page {
+  animation: pageIn 0.25s ease;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes pageIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 /* nicer headings */
@@ -169,4 +181,9 @@ p {
     background-position: 0% 50%;
     transform: scale(1.05);
   }
+}
+.sidebar button.active {
+  background: rgba(74, 163, 255, 0.2);
+  border: 1px solid #4aa3ff;
+  box-shadow: 0 0 15px rgba(74, 163, 255, 0.2);
 }
