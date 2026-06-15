@@ -1,17 +1,15 @@
 function showPage(pageId) {
   const pages = document.querySelectorAll(".page");
+  pages.forEach(p => p.classList.add("hidden"));
 
-  pages.forEach(page => {
-    page.classList.add("hidden");
-  });
+  document.getElementById(pageId).classList.remove("hidden");
 
-  const target = document.getElementById(pageId);
+  // highlight sidebar button
+  const buttons = document.querySelectorAll(".sidebar button");
+  buttons.forEach(btn => btn.classList.remove("active"));
 
-  if (target) {
-    target.classList.remove("hidden");
-  } else {
-    console.log("Page not found:", pageId);
-  }
+  const activeBtn = document.querySelector(`[data-page="${pageId}"]`);
+  if (activeBtn) activeBtn.classList.add("active");
 }
 function setTheme(theme) {
   const bg = document.querySelector(".bg");
