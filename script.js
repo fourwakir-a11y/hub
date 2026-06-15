@@ -33,9 +33,17 @@ function setTheme(theme) {
   `;
 }
 function runSearch() {
-  const query = document.getElementById("searchInput").value;
+  console.log("Search clicked");
+
+  const input = document.getElementById("searchInput");
   const box = document.getElementById("searchFrameContainer");
 
+  if (!input || !box) {
+    console.log("Missing elements");
+    return;
+  }
+
+  const query = input.value.trim();
   if (!query) return;
 
   box.innerHTML = `
