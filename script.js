@@ -6,9 +6,8 @@ function showPage(pageId) {
   document.getElementById(pageId).classList.remove("hidden");
 }
 
-// background changer (simple version)
 function setBg() {
-  const colors = ["#0f0f0f", "#1a1a2e", "#0d1b2a", "#111"];
+  const colors = ["#0a0f16", "#111a26", "#0d1b2a", "#121212"];
   document.body.style.background =
     colors[Math.floor(Math.random() * colors.length)];
 }
