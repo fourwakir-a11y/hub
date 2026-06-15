@@ -1,10 +1,160 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>GameHub</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #0a0a0a;
+      color: white;
+    }
+
+    .hero {
+      height: 400px;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      padding: 50px;
+      transition: 0.3s;
+    }
+
+    .hero-content {
+      max-width: 500px;
+      background: rgba(0,0,0,.5);
+      padding: 20px;
+      border-radius: 15px;
+    }
+
+    .hero h1 {
+      font-size: 50px;
+      margin-bottom: 10px;
+    }
+
+    .play-btn {
+      background: #107c10;
+      border: none;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 10px;
+      margin-top: 15px;
+      cursor: pointer;
+    }
+
+    .section {
+      padding: 30px;
+    }
+
+    .games {
+      display: flex;
+      gap: 20px;
+      overflow-x: auto;
+    }
+
+    .card {
+      min-width: 220px;
+      background: #181818;
+      border-radius: 15px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: .2s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #107c10;
+    }
+
+    .card img {
+      width: 100%;
+      height: 130px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      padding: 15px;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>GameHub</h1>
-  <p>My Xbox-style game library</p>
+
+  <div class="hero" id="hero">
+    <div class="hero-content">
+      <h1 id="title">Snake</h1>
+      <p id="description">Classic arcade game.</p>
+      <button class="play-btn">Play</button>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Featured Games</h2>
+
+    <br>
+
+    <div class="games">
+
+      <div class="card"
+        onmouseover="changeGame(
+        'Snake',
+        'Classic arcade game.',
+        'https://images.unsplash.com/photo-1511512578047-dfb367046420?w=1200'
+      )">
+
+        <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=500">
+        <h3>Snake</h3>
+      </div>
+
+      <div class="card"
+        onmouseover="changeGame(
+        'Flappy Bird',
+        'Fly through the pipes.',
+        'https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1200'
+      )">
+
+        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=500">
+        <h3>Flappy Bird</h3>
+      </div>
+
+      <div class="card"
+        onmouseover="changeGame(
+        '2048',
+        'Merge the tiles.',
+        'https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?w=1200'
+      )">
+
+        <img src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?w=500">
+        <h3>2048</h3>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    function changeGame(title, desc, image) {
+
+      document.getElementById("title").innerText = title;
+      document.getElementById("description").innerText = desc;
+
+      document.getElementById("hero").style.backgroundImage =
+        `linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.8)), url(${image})`;
+    }
+
+    changeGame(
+      "Snake",
+      "Classic arcade game.",
+      "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=1200"
+    );
+  </script>
+
 </body>
+
 </html>
