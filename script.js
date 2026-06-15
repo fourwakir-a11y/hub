@@ -13,6 +13,15 @@ function showPage(pageId) {
     console.log("Page not found:", pageId);
   }
 }
-function setTheme(color) {
-  document.body.style.background = color;
+function setTheme(theme) {
+  const body = document.body;
+
+  body.classList.remove(
+    "theme-default",
+    "theme-blue",
+    "theme-green",
+    "theme-red"
+  );
+
+  body.classList.add("theme-" + theme);
 }
