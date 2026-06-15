@@ -62,19 +62,17 @@
 
     <!-- SEARCH -->
     <<div class="page hidden" id="search">
+  <div class="page hidden" id="search">
   <h1>Search</h1>
 
-  <div class="search-box">
-    <input type="text" placeholder="Search the web..." />
-    <button>Search</button>
-  </div>
+  <div class="search-app">
+    <div class="search-bar">
+      <input id="searchInput" type="text" placeholder="Search the web..." />
+      <button onclick="runSearch()">Search</button>
+    </div>
 
-  <iframe
-    src="https://duckduckgo.com/"
-    width="100%"
-    height="500"
-    style="margin-top:20px; border:none; border-radius:12px;"
-  ></iframe>
+    <iframe id="searchFrame"></iframe>
+  </div>
 </div>
 
     <!-- SETTINGS -->
