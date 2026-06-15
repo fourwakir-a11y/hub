@@ -32,3 +32,11 @@ function setTheme(theme) {
     )
   `;
 }
+function runSearch() {
+  const query = document.getElementById("searchInput").value;
+  const frame = document.getElementById("searchFrame");
+
+  if (!query) return;
+
+  frame.src = "https://duckduckgo.com/?q=" + encodeURIComponent(query);
+}
