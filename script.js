@@ -1,15 +1,7 @@
-const games = [
-{
- title: "Snake",
- banner: "snake-banner.jpg",
- description: "Classic snake."
-},
-{
- title: "Flappy Bird",
- banner: "flappy-banner.jpg",
- description: "Fly through pipes."
+function changeGame(title, desc, image) {
+  document.getElementById("title").innerText = title;
+  document.getElementById("description").innerText = desc;
+
+  document.getElementById("hero").style.backgroundImage =
+    `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.9)), url(${image})`;
 }
-];
-heroTitle.textContent = game.title;
-heroDesc.textContent = game.description;
-heroImage.src = game.banner;
