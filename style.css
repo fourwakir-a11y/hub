@@ -131,3 +131,32 @@ p {
   </div>
 
 </div>
+.theme-default {
+  background: linear-gradient(-45deg, #0a0f16, #111a26, #0a0f16);
+  background-size: 400% 400%;
+  animation: move 12s ease infinite;
+}
+
+.theme-blue {
+  background: linear-gradient(-45deg, #0d1b2a, #1b263b, #0a0f16);
+  background-size: 400% 400%;
+  animation: move 12s ease infinite;
+}
+
+.theme-green {
+  background: linear-gradient(-45deg, #0f2a1a, #1a3b2a, #0a0f16);
+  background-size: 400% 400%;
+  animation: move 12s ease infinite;
+}
+
+.theme-red {
+  background: linear-gradient(-45deg, #2a0f0f, #3b1a1a, #0a0f16);
+  background-size: 400% 400%;
+  animation: move 12s ease infinite;
+}
+
+@keyframes move {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
