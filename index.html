@@ -3,31 +3,65 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Xbox Game Library</title>
+  <title>Web OS</title>
   <link rel="stylesheet" href="style.css"/>
 </head>
+
 <body>
 
-  <div class="hero" id="hero">
-    <h1 id="title">Xbox Library</h1>
-    <p id="description">Hover a game to preview it</p>
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h2>WebOS</h2>
+
+    <button onclick="showPage('home')">Home</button>
+    <button onclick="showPage('music')">Music</button>
+    <button onclick="showPage('games')">Games</button>
+    <button onclick="showPage('search')">Search</button>
+    <button onclick="showPage('settings')">Settings</button>
   </div>
 
-  <div class="games">
+  <!-- MAIN CONTENT -->
+  <div class="main">
 
-  <div class="card"
-       onmouseover="changeGame('Fortnite','Battle Royale chaos','https://images.unsplash.com/photo-1605902711622-cfb43c4437d0?w=1200')">
-    <img src="https://images.unsplash.com/photo-1605902711622-cfb43c4437d0?w=600" />
-  </div>
+    <!-- HOME -->
+    <div class="page" id="home">
+      <h1>Home</h1>
+      <p>Welcome to your Web OS</p>
+    </div>
 
-  <div class="card"
-       onmouseover="changeGame('Minecraft','Build anything','https://images.unsplash.com/photo-1607457561901-e6ec3a6d7c5c?w=1200')">
-    <img src="https://images.unsplash.com/photo-1607457561901-e6ec3a6d7c5c?w=600" />
-  </div>
+    <!-- MUSIC -->
+    <div class="page hidden" id="music">
+      <h1>Music</h1>
+      <iframe width="100%" height="300"
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+        frameborder="0"></iframe>
+    </div>
 
-  <div class="card"
-       onmouseover="changeGame('GTA V','Open world chaos','https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?w=1200')">
-    <img src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?w=600" />
+    <!-- GAMES -->
+    <div class="page hidden" id="games">
+      <h1>Games Library</h1>
+      <p>Coming next (JSON system)</p>
+    </div>
+
+    <!-- SEARCH -->
+    <div class="page hidden" id="search">
+      <h1>Search</h1>
+      <iframe src="https://duckduckgo.com/"
+        width="100%" height="500"></iframe>
+    </div>
+
+    <!-- SETTINGS -->
+    <div class="page hidden" id="settings">
+      <h1>Settings</h1>
+      <button onclick="setBg()">Change Background</button>
+    </div>
+
   </div>
 
 </div>
+
+<script src="script.js"></script>
+</body>
+</html>
