@@ -1,6 +1,11 @@
 function changeGame(title, desc, image) {
   const hero = document.getElementById("hero");
 
+  if (!hero) {
+    console.log("Hero not found — check id='hero'");
+    return;
+  }
+
   document.getElementById("title").innerText = title;
   document.getElementById("description").innerText = desc;
 
