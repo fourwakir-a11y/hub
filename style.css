@@ -109,3 +109,11 @@ h1 {
   border: 1px solid #4aa3ff;
   box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
+h1, h2, h3 {
+  letter-spacing: -0.5px;
+}
+
+p {
+  font-size: 14px;
+  opacity: 0.85;
+}
