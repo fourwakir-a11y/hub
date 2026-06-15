@@ -13,3 +13,6 @@ function showPage(pageId) {
     console.log("Page not found:", pageId);
   }
 }
+function setTheme(color) {
+  document.body.style.background = color;
+}
