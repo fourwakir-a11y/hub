@@ -14,14 +14,23 @@ function showPage(pageId) {
   }
 }
 function setTheme(theme) {
-  const body = document.body;
+  const bg = document.querySelector(".bg");
 
-  body.classList.remove(
-    "theme-default",
-    "theme-blue",
-    "theme-green",
-    "theme-red"
-  );
+  const themes = {
+    default: ["#0a0f16", "#1a1f2e", "#0f2a1a", "#2a0f1a"],
+    blue:    ["#0a0f16", "#0d1b2a", "#1b263b", "#0a3a5a"],
+    green:   ["#0a0f16", "#0f2a1a", "#1a3b2a", "#0b4a2a"],
+    red:     ["#0a0f16", "#2a0f0f", "#3b1a1a", "#5a0a1a"]
+  };
 
-  body.classList.add("theme-" + theme);
+  const colors = themes[theme];
+
+  bg.style.background = `
+    linear-gradient(-45deg,
+      ${colors[0]},
+      ${colors[1]},
+      ${colors[2]},
+      ${colors[3]}
+    )
+  `;
 }
